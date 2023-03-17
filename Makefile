@@ -1,6 +1,9 @@
 server:
 	uvicorn src.main:app --reload
 
+create-db:
+	python -m scripts.database
+
 install-dev-deps:
 	pip install -r requirements/dev.txt
 
