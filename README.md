@@ -9,10 +9,6 @@ Install development dependencies
 ```bash
 make install-dev-deps
 ```
-Create database
-```bash
-make create-db
-```
 Run lint
 ```bash
 make lint
