@@ -1,4 +1,4 @@
-import time
+from datetime import datetime
 
 from sqlalchemy import Boolean, Column, Integer, String, DateTime
 
@@ -15,4 +15,4 @@ class User(Base):
     discord = Column(String, nullable=True)
     password = Column(String)
     is_active = Column(Boolean, default=True)
-    data_joined = Column(DateTime, default=time.now())
+    data_joined = Column(DateTime, default=datetime.now())
