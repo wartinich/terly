@@ -5,7 +5,7 @@ from src.auth.schemas import Token, UserCreate, Login
 from src.auth.services import create_user, sign_jwt, login_user
 from src.database import get_db
 
-router = APIRouter()
+router = APIRouter(tags=["auth"])
 
 
 @router.post("/register", response_model=Token)
