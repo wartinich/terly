@@ -1,4 +1,4 @@
-# Gamer portal
+# Studenly
 
 ## Setup project for development
 Add .env file to the root of the project and fill it
