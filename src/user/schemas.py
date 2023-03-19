@@ -7,6 +7,9 @@ class User(BaseModel):
     steam: str
     discord: str
 
+    class Config:
+        orm_mode = True
+
 
 class UserUpdate(BaseModel):
     steam: str
