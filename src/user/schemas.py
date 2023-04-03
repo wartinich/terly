@@ -1,11 +1,13 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 
-class User(BaseModel):
+class UserDTO(BaseModel):
     email: str
     username: str
-    steam: str
-    discord: str
+    steam: Optional[str]
+    discord: Optional[str]
 
     class Config:
         orm_mode = True
@@ -14,3 +16,8 @@ class User(BaseModel):
 class UserUpdate(BaseModel):
     steam: str
     discord: str
+
+
+class TokenPayload(BaseModel):
+    user_id: str = None
+    expires: int = None
