@@ -4,6 +4,7 @@ from pydantic import BaseModel
 
 
 class UserDTO(BaseModel):
+    id: int
     email: str
     username: str
     steam: Optional[str]
@@ -13,9 +14,12 @@ class UserDTO(BaseModel):
         orm_mode = True
 
 
-class UserUpdate(BaseModel):
-    steam: str
-    discord: str
+class UserUpdateDTO(BaseModel):
+    steam: str = Optional[str]
+    discord: str = Optional[str]
+
+    class Config:
+        orm_mode = True
 
 
 class TokenPayload(BaseModel):
